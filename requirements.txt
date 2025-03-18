@@ -1,0 +1,13 @@
+streamlit 
+osmnx 
+folium 
+networkx 
+pandas 
+requests 
+streamlit_folium
+googlemaps
+streamlit-javascript
+supabase
+streamlit-authenticator
+python-dotenv
+
