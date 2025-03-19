@@ -27,17 +27,17 @@ for key in ["start_lat", "start_lon", "end_lat", "end_lon"]:
 POPULAR_PLACES = ["Delhi, India", "Mumbai, India", "Bangalore, India", "Chennai, India", "Hyderabad, India"]
 
 # Load Data
-crime_data = pd.read_csv("data/crime_data.csv")
+crime_data = pd.read_csv("crime_data.csv")
 
 # ✅ Fix column names for CCTV data
-if os.path.exists("data/cctv_locations.csv"):
-    cctv_data = pd.read_csv("data/cctv_locations.csv")
+if os.path.exists("cctv_locations.csv"):
+    cctv_data = pd.read_csv("cctv_locations.csv")
     cctv_data.rename(columns={"Longitude": "longitude", "Latitude": "latitude"}, inplace=True)
 else:
     cctv_data = pd.DataFrame(columns=["latitude", "longitude"])
 
 police_data = pd.read_csv("bengaluru_police_stations_geocoded.csv")
-feedback_data = pd.read_csv("data/user_feedback.csv") if os.path.exists("data/user_feedback.csv") else pd.DataFrame(columns=["latitude", "longitude", "feedback"])
+feedback_data = pd.read_csv("user_feedback.csv") if os.path.exists("user_feedback.csv") else pd.DataFrame(columns=["latitude", "longitude", "feedback"])
 
 def calculate_safety_index(crime_data):
     """Calculate safety index based on crime severity."""
