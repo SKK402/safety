@@ -165,7 +165,7 @@ st.header("Find the Best Route")
 use_live_location = st.checkbox("Use Live Location for Start Point")
 
 if use_live_location:
-   start_lat, start_lon = 12.847917437923712, 77.6882488655413
+   start_lat, start_lon = 12.836559196847052, 77.65709306836929
    st.session_state["start_lat"], st.session_state["start_lon"] = start_lat, start_lon
    st.success(f"Live location set: {start_lat}, {start_lon}")
 else:
